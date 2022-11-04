@@ -33,3 +33,7 @@
 
 # Zip lab folders
 *.zip
+
+# VSCode config
+*.vscode
+*.code-workspace
