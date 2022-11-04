@@ -1,0 +1,7 @@
+C++
+
+    $g++ HelloWorld.cpp main.cpp -o run.x
+
+SystemC
+
+    $make
