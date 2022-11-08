@@ -1,7 +1,7 @@
 #define ABSTRACT_TIMER
 
 #include <systemc.h>
-#include "tlc.h"
+#include "controller.h"
 #include "../Exercise_1/testbench.h"
 #ifdef ABSTRACT_TIMER
 #include "timer.h"
@@ -17,7 +17,7 @@ int sc_main (int argc, char * argv[])
     // timer signals
     sc_signal<bool> start , sec_5 ;
 
-    TLC T1( "T1" );
+    CONTROLLER T1( "T1" );
     Testbench TB1("TB1");
 #ifdef ABSTRACT_TIMER
     TIMER timer( "Timer1" );

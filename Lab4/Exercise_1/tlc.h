@@ -20,7 +20,7 @@ SC_MODULE(TLC)
 			wait (10 , SC_SEC);
 			if (!car) // wait until car arrives at Secondary
 			    wait(car.posedge_event()) ;
-			wait(5,SC_SEC);  
+			//wait(5,SC_SEC);  
 			M.write(YELLOW);
 			wait (5,SC_SEC);
 			M.write(RED);
