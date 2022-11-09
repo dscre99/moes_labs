@@ -24,7 +24,7 @@ int sc_main (int argc, char * argv[])
 #else
     TIMER_CLK timer("Timer1");
     sc_clock clk("clk", sc_time(1, SC_US)) ;
-    timer.clk(clk) ;
+    timer.clk(clk);
 #endif
 
      T1.M(M);
