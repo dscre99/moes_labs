@@ -1,6 +1,6 @@
 #include <systemc.h>
 #include "interfaces.h"
-#include "../Exercise_3/tlm_tlc.h"
+#include "../Exercise_3/tlm_tlc.cpp"
 #include "hw_drivers.h"
 #include "../Exercise_1/testbench.h"
 
@@ -11,7 +11,7 @@ int sc_main (int argc, char * argv[])
 	sc_clock clk("clk",sc_time(1, SC_US));
 
 	TLC_SW TLC("Controller") ;
-	HW_DRIVERS hw_drivers("HW driver");
+	HW_DRIVERS hw_drivers("HW_driver");
 	Testbench TB("Testbench");
 	
 	hw_drivers.car(car);
