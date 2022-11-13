@@ -1,6 +1,7 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
 
+#include "systemc.h"
 #include <utils.h>
 
 struct light_if : virtual public sc_interface
@@ -18,8 +19,8 @@ struct car_if : virtual public sc_interface
 };
 struct bus_if : virtual public sc_interface
 {
-    virtual void write(sc_uint<32> addr, sc_uint<32> data);
-    virtual sc_uint<32> read(sc_uint<32> addr);
+    virtual void write(sc_uint<32> addr, sc_uint<32> data) = 0;
+    virtual sc_uint<32> read(sc_uint<32> addr) = 0;
 };
 
 #endif

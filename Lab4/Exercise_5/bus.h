@@ -15,7 +15,7 @@ SC_MODULE(BUS), virtual bus_if
 
     SC_CTOR(BUS) : timer("timer"), PIO("PIO") {}
 
-    virtual void write(sc_uint<32> addr, sc_uint<32> data)
+    void write(sc_uint<32> addr, sc_uint<32> data)
     {
         switch (addr)
         {
@@ -45,9 +45,9 @@ SC_MODULE(BUS), virtual bus_if
         }
     }
 
-    virtual sc_uint<32> read(sc_uint<32> addr)
+    sc_uint<32> read(sc_uint<32> addr)
     {
-        sc_uint<32> result;
+        sc_uint<32> result = 0;
 
         switch (addr)
         {

@@ -10,5 +10,6 @@
 
 enum color {RED, YELLOW, GREEN};
 inline const char *COLORS[] = {"RED", "YELLOW", "GREEN"};
+inline const sc_time BUS_DELAY(1, SC_US);   // 1MHz BUS clock
 
 #endif
